@@ -3,7 +3,7 @@ class Solution:
         # negative int is not palindrome
         if x < 0:
             return False
-        # one digit int is not palindrome
+        # one digit int is palindrome
         if 0 <= x < 10:
             return True
         # tailing 0 is not palindrome

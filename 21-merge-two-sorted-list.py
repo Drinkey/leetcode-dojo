@@ -10,45 +10,6 @@ class ListNode:
     __repr__ = __str__
 
 
-class LinkedList:
-    def __init__(self, max_size=10):
-        self.head = ListNode()
-        self.tail = None
-
-        self.max_size = max_size
-        self.length = 0
-
-    def append(self, value):
-        if self.max_size <= self.length:
-            raise Exception(f"LinkedList Full:{self.max_size} >= {self.length}")
-        
-        node = ListNode(value)
-        print(f"created new ListNode: {node}")
-        if self.tail is None:
-            self.head.next = node
-        else:
-            self.tail.next = node
-        self.tail = node
-        self.length += 1
-        print(f"New ListNode: {node}, length={self.length}")
-
-    def insert0(self, value):
-        node = ListNode(value)
-        print(f"insert0 {node}")
-        if self.tail is None:
-            print("new list, adding after head")
-            node.next = self.tail
-            self.head.next = node
-            self.tail = node
-        else:
-            print("list have node, adding after head")
-            node.next = self.head.next
-            self.head.next = node
-        
-    def pp(self):
-        ptr = self.head
-        print(ptr)
-
 class Solution:
     def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:
         ptr1 = l1

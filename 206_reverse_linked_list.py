@@ -65,16 +65,16 @@ class Solution:
 
         return out_linked_list.head.next
 
-    def test(self):
-        in_list = [1,2,3,4,5]
-        link_list = LinkedList()
-        
-        for i in in_list:
-            link_list.append(i)
-        print("original linked list for test")
-        link_list.pp()
-        r = self.reverseList(link_list.head)
-        print(f"result={r}")
+
 
 solution = Solution()
-solution.test()
+def test_sample_01():
+    in_list = [1,2,3,4,5]
+    link_list = LinkedList()
+    
+    for i in in_list:
+        link_list.append(i)
+    print("original linked list for test")
+    link_list.pp()
+    r = solution.reverseList(link_list.head)
+    print(f"result={r}")

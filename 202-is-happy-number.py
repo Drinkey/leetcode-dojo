@@ -1,6 +1,8 @@
 
 class Solution:
     tries = 0
+    # pre-calculated unhappy numbers
+    # if the square sum of the number in this list, endless loop started
     unhappy_nums = (4,16,37,58,89,145,42,20)
     def isHappy(self, n: int) -> bool:
         x = n
